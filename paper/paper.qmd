@@ -1,0 +1,158 @@
+---
+title: "Mini-Essay 12 MRP "
+subtitle: "Voter Registration Databases and MRP"
+author: 
+  - Rayan Awad Alim
+thanks: "Code and data are available at: https://github.com/RayanAlim/Voter-Registration-Databases-and-MRP"
+date: today
+date-format: long
+abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+
+# A- Datasheet for the voter file dataset
+
+---
+title: "Datasheet for the US Voter File Dataset"
+output: html_document
+---
+
+## Motivation
+
+- **Purpose:** To analyze voting patterns, demographic information, and political preferences in the 2020 US election, aiding researchers and analysts.
+- **Creators:** Compiled by a non-partisan electoral research organization.
+- **Funding:** Sponsored by an academic consortium focused on electoral research and democracy enhancement.
+
+## Composition
+
+- **Instance Representation:** Each record pertains to an individual voter's demographic data, voting history, and 2020 US Cooperative Election Study survey responses.
+- **Instance Count:** About 200,000 individuals.
+- **Sample or Complete:** A stratified sample from a larger US voter file, aimed at accurately representing the national voter demographic.
+- **Data Contents:** Voter demographic details, political affiliation, historical voting activity, and survey answers regarding the 2020 election.
+
+## Collection Process
+
+- **Data Acquisition:** Through public voter records and the 2020 US Cooperative Election Study, with participants' consent.
+- **Collection Methods:** Secure access to voter records, web-based survey distribution, and demographic-based post-stratification.
+- **Collection Participants:** Managed by the research organization with a professional survey company's support for the election study.
+
+## Preprocessing/Cleaning/Labeling
+
+- **Preprocessing Steps:** Data cleansing for inaccuracies, voter record validation, and categorization based on demographics and survey outcomes.
+- **Preprocessing Software:** In-house scripts, available upon request for academic purposes.
+
+## Uses
+
+- **Prior Uses:** Utilized in scholarly research for insights into voting behaviors, demographic impacts, and issue-specific election influences.
+- **Repository:** A list of publications using this dataset is maintained online by the organizing body.
+
+## Distribution
+
+- **Distribution Method:** Available to academic-affiliated researchers under a data usage agreement safeguarding individual privacy in the dataset.
+
+## Maintenance
+
+- **Maintenance and Support:** Hosted and periodically updated by the organizing non-partisan research entity.
+
+## Legal & Ethical Considerations
+
+- **Ethical Review:** Approved by an ethics board, focusing on privacy protection and ethical data application.
+- **Privacy Measures:** Anonymization to exclude personally identifiable information, with restricted data access for approved research uses only.
+
+## Caveats and Recommendations
+
+- **Limitations:** Represents a sampled population and might not capture all voter demographics intricacies.
+- **Usage Recommendations:** Interpret within the 2020 election's context, and consider alongside additional data sources for thorough analyses.
+
+
+
+# Model Card: 2020 US Election Voting Pattern Model
+
+## Model Details
+
+- **Developers:** Non-partisan electoral research team.
+- **Model Date:** July 2021.
+- **Model Version:** 1.0.
+- **Model Type:** Logistic Regression for predicting voter preferences.
+- **Model Description:** This model uses demographic information and historical voting data to predict voting preferences in the 2020 US Presidential Election.
+- **Contact Information:** [Election Research Group Contact](mailto:contact@electionresearch.org)
+
+## Intended Use
+
+- **Primary Use:** To understand and analyze factors influencing voter behavior in the 2020 US Presidential Election.
+- **Users:** Political scientists, electoral strategists, policy makers, and academic researchers.
+- **Out-of-scope Uses:** Not intended for individual voter identification, micro-targeting, or any commercial applications.
+
+## Factors
+
+- **Evaluation Factors:** Demographics (age, gender, ethnicity), historical voting behavior, geographical region.
+- **Relevant Factors:** Same as above, with additional focus on educational background and income levels.
+
+## Metrics
+
+- **Performance Measure:** Accuracy, Precision, Recall, F1 Score.
+- **Decision Thresholds:** Set based on maximizing F1 Score across validation datasets.
+- **Variability:** Performance evaluated across different demographics to understand model biases.
+
+## Training Data
+
+- **Source:** 2020 US Cooperative Election Study, supplemented with anonymized voter file records.
+- **Preprocessing:** Data cleaned for missing values, with feature engineering to extract meaningful predictors.
+
+## Ethical Considerations
+
+- **Data Privacy:** All data anonymized and used in compliance with data privacy regulations.
+- **Fairness and Bias:** Model tested for fairness across demographics, adjustments made to mitigate discovered biases.
+- **Transparency:** Full disclosure of model purpose, capabilities, and limitations.
+- **Accountability:** Feedback mechanism established for reporting and addressing ethical concerns.
+
+## Caveats and Recommendations
+
+- **Model Limitations:** Predictions are based on historical data and may not account for unforeseen political dynamics.
+- **Recommendations for Use:** Best used in conjunction with qualitative analyses and as a supplementary tool for understanding voter behavior patterns.
+- **Future Work:** Incorporate more granular data on voter issues and sentiments for improved predictions.
+
+
+# Ethical Considerations of Model Features
+
+## Privacy and anonimity 
+I would implement rigorous data anonymization techniques, this would be to ensure that any personal identifiers are removed. Eg.:hashing names or replacing them with unique IDs.
+
+## Fairness 
+
+Bias in datasets can lead to unfair outcomes. To mitigate bias, I would firstly analyze the dataset for representation across different groups. If disparities are found, I'll use techniques such as resampling or weighting. Also, exploring algorithmic fairness techniques during model training can help reduce bias.
+
+# Transparency and Reproducibility
+
+Making sure the process is transparent and documenting every step of the modeling process, from data preprocessing to model evaluation for accountability and reproducibility.
+
+
+# Tests for Dataset, Model, and Predictions
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+# References
+
+
